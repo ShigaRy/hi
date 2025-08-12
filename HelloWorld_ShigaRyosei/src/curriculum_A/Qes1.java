@@ -2,15 +2,13 @@ package curriculum_A;
 
 public class Qes1 {
 	//1
-	static Byte byteNum = 1;			//Byte宣言&初期値設定
-	static Short shortNum = 1;			//short宣言&初期値設定
-	static int intNum = 1;				//int宣言&初期値設定
-	static long longNum = 1;			//long宣言&初期値設定
-	static float floatNum = 1.0f;		//float宣言&初期値設定
-	static double doubleNum = 1.0; 	//double宣言&初期値設定
-	static char letter = 'u' ;			//char宣言&初期値設定
-	static String letters = "おはぎ";	//String宣言&初期値設定
-	static boolean isBoolean = false;	//Boolean宣言&初期値設定
+	static int intNum;					//intNumをintで宣言
+	static long longNum;				//longNumをlongで宣言
+	static float floatNum;				//floatNumをfloatで宣言
+	static double doubleNum; 			//doubleNumをdoubleで宣言
+	static char letter;				//letterをcharで宣言
+	static String letters;				//lettersをStringで宣言
+	static boolean isBoolean;			//isBooleanをBooleanで宣言
 	
 	static String name = "山田太郎";	//nameをStringで宣言、名前を代入 問題4
 	
@@ -38,8 +36,10 @@ public class Qes1 {
 	
 	//2
 	public static void main(String[] args) {
+		Byte byteNum;				//byteNumをByteで宣言
+		Short shortNum;				//shortNumをShortで宣言
 		byteNum = 10; 				//byteNumに10を代入
-		shortNum = 100;			//shortNumに100を代入
+		shortNum = 100;				//shortNumに100を代入
 		intNum = 1000;				//intNumに1000を代入
 		longNum = 10000;			//longNumに10000を代入
 		floatNum = 9.5f; 			//floatNumに9.5fを代入

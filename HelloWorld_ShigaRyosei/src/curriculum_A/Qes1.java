@@ -12,7 +12,7 @@ public class Qes1 {
 		long longNum = 0;				//longNumをlongで宣言&初期値設定
 		float floatNum = 0.0f;				//floatNumをfloatで宣言&初期値設定
 		double doubleNum = 0.0; 			//doubleNumをdoubleで宣言&初期値設定
-		char letter = 0;				//letterをcharで宣言&初期値設定
+		char letter = '\u0000';//letterをcharで宣言&初期値設定
 		String letters = null;				//lettersをStringで宣言&初期値設定
 		boolean isBoolean = false;			//isBooleanをBooleanで宣言&初期値設定
 		

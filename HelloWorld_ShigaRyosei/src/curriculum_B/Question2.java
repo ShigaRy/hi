@@ -75,7 +75,7 @@ public class Question2 {
 		System.out.println(result);								//結果
 		
 																//7
-		score = (int)(Math.random() * 101 + 0);						//0~100をランダムに決定
+		score = (int)(Math.random() * 100 + 0);						//0~100をランダムに決定
 		if (score >= 90) {										//90以上か判定
 			result = "優";
 		}else if (score >= 70) {								//70以上か判定

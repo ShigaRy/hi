@@ -32,7 +32,7 @@ public class Question3 {
 		
 		for (int d = 1; d < 6; d++) {											//dを1~5まで増やす
 			for (int e = 1; e < d + 1; e++) {									//eをdの数まで増やす
-				astStr += "*";													//astStrにアスタリスクを増やす
+				System.out.print("*");													//astStrにアスタリスクを増やす
 			}
 			System.out.println(astStr);											//出力
 			astStr = "";														//astStrのリセット
@@ -76,6 +76,7 @@ public class Question3 {
 		Scanner scanner = new Scanner(System.in);								//scannerのインスタンスを作成
         
 		 int k = scanner.nextInt();												//ユーザーの入力を受付、kに代入
+		 String reset = scanner.nextLine();										//入力リセット用
 	        
 	        while (k != 0) {													//kが0になるまでユーザーに入力を繰り返し要求
 	        	k = scanner.nextInt();
@@ -87,7 +88,7 @@ public class Question3 {
         String str = "";														//出力用変数strを宣言
         for (int l = 1;l < 10; l++) {											//1~9まで繰り返し
         	for (int m = 1; m < 10; m++) {										//同様に繰り返し
-        		str += String.format("||%2d * %2d = %2d", l, m, l * m);			//計算式をstrに追加
+        		str += String.format("||%02d * %02d = %02d", l, m, l * m);			//計算式をstrに追加
         	}
         	System.out.println(str);											//strを出力
         	str = "";															//strを初期化

@@ -28,14 +28,12 @@ public class Question3 {
 		System.out.println(sum);												//sumを表示
 		
 																				//5
-		String astStr = "";														//astStrを宣言（表示用）
 		
 		for (int d = 1; d < 6; d++) {											//dを1~5まで増やす
 			for (int e = 1; e < d + 1; e++) {									//eをdの数まで増やす
-				System.out.print("*");													//astStrにアスタリスクを増やす
+				System.out.print("*");											//アスタリスクを出力
 			}
-			System.out.println(astStr);											//出力
-			astStr = "";														//astStrのリセット
+			System.out.println("");												//改行用
 		}
 		
 																				//6

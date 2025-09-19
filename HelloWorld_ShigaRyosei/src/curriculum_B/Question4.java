@@ -3,6 +3,20 @@ package curriculum_B;
 import java.util.Scanner;
 
 public class Question4 {
+	
+	public static int[] maxMin(int[] arrays) {
+		int c = 0;
+		int d = arrays[0];
+		for (int i: arrays) {													
+			if (c < i) {													//現在の最大値より新しく入力された値が大きければ最大値を更新
+				c = i;
+			}else if (d > i) {												//最大値ではなかった場合、最小値を検証
+				d = i;
+			}
+		}
+		int[] result = {c , d};
+		return result;
+	}
 	public static void main(String[] args) {
 		
 																			//1
@@ -28,16 +42,8 @@ public class Question4 {
 		
 																			//4
 		int[] hair = {12, 7, 9, 21, 5, 18};
-		int c = 0;															//最大値、最小値用の変数を用意、最小値は配列の一番始めの数を初期値として設定
-		int d = hair[0];
-		for (int i: hair) {													//現在の最大値より新しく入力された値が大きければ最大値を更新
-			if (c < i) {
-				c = i;
-			}else if (d > i) {												//最大値ではなかった場合、最小値を検証
-				d = i;
-			}
-		}
-		String e = String.format("最大値:%d , 最小値:%d", c , d);			//最大値最小値を表示
+		int[] r = maxMin(hair);												//7行目のメソッドを使用
+		String e = String.format("最大値:%d , 最小値:%d", r[0] , r[1]);		//最大値最小値を表示
 		System.out.println(e);
 		
 																			//5
@@ -91,22 +97,20 @@ public class Question4 {
 		 
 		 																	//9
 		 int[][] array2 = {{12, 15, 8}, {6, 19, 25}, {30, 2, 10}};
-		 int l = 0;															//問4と同じメソッド
-		 int m = array2[0][0];
+		 int[] s = new int [array2.length * array2[0].length];				//1次元配列に変換する為の変数を宣言
+		 int t = 0;															//カウント用
 		 
-		 for (int i = 0; i < array2.length; i++) {							//行列処理→問4のアルゴリズム
+		 for (int i = 0; i < array2.length; i++) {							//各行列から要素を一次元配列に入れる
 			 for (int j = 0; j < array2[i].length ; j++) {
-				 int n = array2[i][j];
-					if (l < n) {
-						l = n;
-					}
-					else if (m > n) {
-						m = n;
-						}
-			 } 
+				s[t] = array2[i][j];
+				t += 1;
+			 }
+			 
 		 }
 		 
-		 String o = String.format("最大値:%d , 最小値:%d", l , m);
+		 int[] p = maxMin(s);												//問4と同じメソッド
+		 
+		 String o = String.format("最大値:%d , 最小値:%d", p[0] , p[1]);
 		 System.out.println(o);
 		 
 		 																	//10

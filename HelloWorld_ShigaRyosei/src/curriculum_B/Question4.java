@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Question4 {
 	
 	public static int[] maxMin(int[] arrays) {
-		int c = 0;
+		int c = arrays[0];
 		int d = arrays[0];
 		for (int i: arrays) {													
 			if (c < i) {													//現在の最大値より新しく入力された値が大きければ最大値を更新
@@ -28,8 +28,8 @@ public class Question4 {
 																			//2
 		int[] hairet = { 10, 20, 30, 40, 50};
 		int a = hairet.length - 1;
-		for (int i = 0; a >= i; i++) {
-			System.out.println(hairet[a - i]);								//配列の長さ - 繰り返し回数を引くことで逆順で配列を表示
+		for (int i = a; i >= 0; i--) {
+			System.out.println(hairet[i]);									//配列の長さ - 繰り返し回数を引くことで逆順で配列を表示
 		}
 		
 																			//3
@@ -58,7 +58,6 @@ public class Question4 {
         
 		int f = scanner.nextInt();												
 		scanner.nextLine();
-		scanner.close();
 		
 		for (int i: hai) {
 			if (i == f) {

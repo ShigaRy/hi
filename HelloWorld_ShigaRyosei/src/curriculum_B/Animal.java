@@ -8,11 +8,9 @@ public class Animal {
 	private int speed;
 	
 	//コンストラクタ
-	Animal(String name, double bodyLength , int speed){
-		this.name = name;
-		this.bodyLength = bodyLength;
-		this.speed = speed;
+	public Animal(){
 	}
+	
 	//getter
 	public String getName() {
 		return name;

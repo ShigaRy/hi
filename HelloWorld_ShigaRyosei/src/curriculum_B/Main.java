@@ -8,7 +8,7 @@ public class Main {
 		greeting.sayHello();
 		
 		//5
-		Animal a = new Animal("",0,0);
+		Animal a = new Animal();
 		
 		//setterに入れる
 		a.setName("ライオン");
@@ -18,7 +18,7 @@ public class Main {
 		//出力
 		System.out.println(String.format("動物名:%s", a.getName()));
 		System.out.println(String.format("体長:%.1fm", a.getBodyLength()));
-		System.out.println(String.format("名前:%dkm/h", a.getSpeed()));
+		System.out.println(String.format("速さ:%dkm/h", a.getSpeed()));
 	}
 
 }

@@ -8,7 +8,7 @@ public class Employee {
 			
 		}
 		
-		public String getEmployeeId(String employeeId) {
+		public String getEmployeeId() {
 			return employeeId;
 		}
 		
@@ -17,7 +17,7 @@ public class Employee {
 		}
 		
 		public void showInfo() {
-			System.out.println(String.format("社員ID:%s,名前:%s" , employeeId , name));
+			System.out.println(String.format("社員ID:%s,名前:%s" , getEmployeeId() , getName()));
 		}
 		
 }

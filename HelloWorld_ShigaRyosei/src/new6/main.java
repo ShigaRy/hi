@@ -9,7 +9,7 @@ public class main {
         // Employee型のリストとして宣言
         List<Billable> list1 = new ArrayList<Billable>();
 
-        // サブクラスのインスタンスをEmployee型のリストに追加
+        // サブクラスのインスタンスをBillable型のリストに追加
         list1.add(new FullTimeEmployee("F001", "山田 太郎"));
         list1.add(new ContractEmployee("C001", "佐藤 花子"));
         list1.add(new FullTimeEmployee("F002", "田中 次郎"));
@@ -25,7 +25,7 @@ public class main {
             // Billable型としてcostForDayを呼び出す
             int dailyWage = bill.costForDay(hours); 
             
-            // どのサブクラスのインスタンスかを実行時に判別し、適切なメソッドが実行される
+            // 出力
             System.out.printf(
                 "ID: %s, 名前: %s, 勤務時間: %d時間, 日当: ¥%d%n",
                 bill.getId(),

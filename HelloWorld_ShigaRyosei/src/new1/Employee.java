@@ -1,4 +1,4 @@
-package New;
+package new1;
 
 public class Employee {
 	//名前フィールドを設定

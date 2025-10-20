@@ -7,7 +7,13 @@ public class FullTime extends Employee {
 	@Override
 	//時給計算(1250/h [8時間超過分は1.25x])
 	public int calculateSalary(int workTime) {
-		int wage = Math.max(0,workTime - 8) * (int)(HOURLY_RATE * 1.25) + (HOURLY_RATE * 8);
+		int wage;
+		if (workTime > 8) {
+			wage = Math.max(0,workTime - 8) * (int)(HOURLY_RATE * 1.25) + (HOURLY_RATE * 8);
+		} 
+		else{
+			wage = (HOURLY_RATE * workTime);
+		}
 		return wage;
 	}
 	

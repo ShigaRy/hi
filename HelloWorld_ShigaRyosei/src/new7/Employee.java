@@ -1,6 +1,6 @@
 package new7;
 		
-	class Employee implements calclateSalary {	
+class Employee implements CalclateSalary {	
 		protected String type;	
 		protected String name;
 			
@@ -17,7 +17,7 @@ package new7;
 		}
 	
 	@Override
-	public int calculateSalary(int workTime) {
+	public int CalculateSalary(int workTime) {
 		return 0;
 	}
 	

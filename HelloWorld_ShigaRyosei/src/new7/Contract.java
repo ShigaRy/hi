@@ -5,15 +5,15 @@ public class Contract extends Employee {
 	private static final int HOURLY_RATE = 1000;
 	
 	@Override
-	//時給計算(1250/h [8時間超過分は1.25x])
-	public int calculateSalary(int workTime) {
+	//時給計算(1000/h)
+	public int CalculateSalary(int workTime) {
 		int wage = HOURLY_RATE * workTime;
 		return wage;
 	}
 	
 	
 	public Contract() {
-		super(null, null); 
+		super(null, null);
 	}
 	
 	

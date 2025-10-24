@@ -7,7 +7,7 @@ import java.util.List;
 public class Main {
 	    public static void main(String[] args) {
 	        // Employee型のリストとして宣言
-	        List<calclateSalary> list1 = new ArrayList<calclateSalary>();
+	        List<CalclateSalary> list1 = new ArrayList<CalclateSalary>();
 
 	        // サブクラスのインスタンスをcalculateSalary型のリストに追加
 	        list1.add(new FullTime("F001", "山田 太郎"));
@@ -19,11 +19,11 @@ public class Main {
 	        
 	        // リストをループ処理
 	        for (int i = 0; i < list1.size(); i++) {
-	        	calclateSalary cs = list1.get(i);
+	        	CalclateSalary cs = list1.get(i);
 	            int hours = hoursWorkedList.get(i);
 	            
 	            // calculateSalary型としてcostForDayを呼び出す
-	            int dailyWage = cs.calculateSalary(hours); 
+	            int dailyWage = cs.CalculateSalary(hours); 
 	            
 	            // 出力
 	            System.out.printf(

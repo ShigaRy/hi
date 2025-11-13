@@ -27,11 +27,11 @@ public class Battle {
         	String OUTPUT_FILENAME = "data/battle_log";
             writer = new PrintWriter(new FileWriter(OUTPUT_FILENAME)); 
 
-            writer.println("バトル開始─────────");
+            writer.println("----バトル開始----");
             writer.println(String.format("%s (攻撃力:%d　体力:%d)",player.getName() , player.getAT(), player.getHP()));
             writer.println("VS");
             writer.println(String.format("%s (攻撃力:%d　体力:%d)",demon.getName() , demon.getAT(), demon.getHP()));
-            writer.println("-----------------");
+            writer.println("------------------");
 
             int pHP = player.getHP();
             int dHP = demon.getHP();
@@ -44,7 +44,7 @@ public class Battle {
             } else {
                 writer.println(demon.getName() + "が先攻！");
             }
-            writer.println("-----------------");
+            writer.println("------------------");
 
             do {
             	//先攻後攻をフラグ管理
@@ -73,13 +73,13 @@ public class Battle {
             } while(pHP >= 1 && dHP >= 1);
             
             // 勝利判定の出力
-            writer.println("--- バトル終了 ---");
+            writer.println("----バトル終了----");
             if (pHP > 0) {
                 writer.println(player.getName() + "の勝利！");
             } else {
                 writer.println(demon.getName() + "の勝利...");
             }
-            writer.println("-----------------");
+            writer.println("------------------");
             
             // コンソールにファイルに出力したことを通知
             System.out.println("バトルログを「" + OUTPUT_FILENAME + "」に出力しました。");

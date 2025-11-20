@@ -24,7 +24,7 @@ public class Battle {
         PrintWriter writer = null;
         
         try {
-        	String OUTPUT_FILENAME = "data/battle_log";
+        	String OUTPUT_FILENAME = "data/battle_log.txt";
             writer = new PrintWriter(new FileWriter(OUTPUT_FILENAME)); 
 
             writer.println("----バトル開始----");

@@ -33,15 +33,15 @@ public class Demon {
                 final Character newChara = new Character(demonName, demonHP, demonAT, demonSP);
                 return newChara;
             } catch (NumberFormatException nfex) {
-                System.err.println(String.format("数値変換エラーが発生しました。ファイル (%d) の2～4行目を確認してください。", DEMON_FILE_PATH));
+                System.err.println(String.format("数値変換エラーが発生しました。ファイル (%s) の2～4行目を確認してください。", DEMON_FILE_PATH));
                 return null;
             }
             
         } catch(IOException ioex) {
-            System.err.println(String.format("ファイル読み込みエラー(%d)が発生しました。ファイルが存在するか確認してください。", DEMON_FILE_PATH));
+            System.err.println(String.format("ファイル読み込みエラー(%s)が発生しました。ファイルが存在するか確認してください。", DEMON_FILE_PATH));
             ioex.printStackTrace();
+            return null;
         }
-		return null;
     }
   
 }
